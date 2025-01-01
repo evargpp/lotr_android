@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">SGame</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">SGame PO@2024</string>
+    <string name="nav_header_subtitle1">Mikolaj Mikolajewski</string>
+    <string name="nav_header_subtitle2">Bartosz Grabski</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_overview">Podgląd</string>
+    <string name="menu_goods">Surowce</string>
+    <string name="menu_politics">Polityka</string>
+    <string name="menu_university">Uniwersytet</string>
+    <string name="menu_tavern">Tawerna</string>
+    <string name="menu_defense">Straże</string>
+    <string name="menu_team">Drużyna</string>
+    <string name="menu_goods_settings">Ustawienia surowców</string>
+    <string name="menu_development">Rozwój</string>
+    <string name="menu_expeditions">Wyprawy</string>
+    <string name="menu_world">Śródziemie</string>
+
+    <string name="goods_mithril">Mithril</string>
+    <string name="goods_wood">Drewno</string>
+    <string name="goods_bread">Chlebki</string>
+    <string name="goods_fish">Ryby</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
