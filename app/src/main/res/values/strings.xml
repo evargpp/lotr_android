@@ -25,6 +25,21 @@
     <string name="goods_bread">Chlebki</string>
     <string name="goods_fish">Ryby</string>
 
+    <string name="building_mine">Kopalnia</string>
+    <string name="building_sawmill">Tartak</string>
+    <string name="building_bakery">Piekarnia</string>
+    <string name="building_storage_mithril">Magazyn mithrilu</string>
+    <string name="building_storage_wood">Magazyn drewna</string>
+    <string name="building_storage_fish">Magazyn ryb</string>
+    <string name="building_fisherman">Rybak</string>
+
+    <string name="buildings_desc">Opowieść o Surowcach Śródziemia\n\n
+W Śródziemiu, gdzie mgły w dolinach tańczą o brzasku, a lasy szumią pieśniami dawnych czasów, cztery dary ziemi i rzemiosła cenią mieszkańcy krainy ponad inne.\n\n
+Mithril, blaskiem gwiazd nocy utkany, wydobywany jest z głębin gór Khazad-dûm. To srebrzyste dobro, lżejsze od piór i twardsze od stali, kryje w sobie magię starożytnych światów. Krasnoludy, z miłością do rzemiosła, kują z niego pancerze i pierścienie, o których pieśni śpiewają elfowie pod gwiazdami.\n\n
+Drewno, choć zwykłe może się zdawać, niesie w sobie opowieści o prastarych lasach Fangornu i krainach rozległych, gdzie wiatry opowiadają historie drzew. Pod dłonią człowieka czy elfa, staje się łodzią, domem lub łukiem, który nie chybi celu. Każda belka kryje w sobie mądrość wieków, a każda gałązka drży od oddechu życia.\n\n
+Ryby, błękitne stworzenia mórz i rzek, to dar Ulma, Władcy Wód. W jeziorach szerokich i potokach rwących łowcy je wyławiają, wdzięczni za to, co morze ofiaruje. W ich połyskujących łuskach skrywa się echo fal i tajemnic głębin, a smak ich mięsa to uczta godna królów.\n\n
+Chlebki, pokarm codzienny, a zarazem święty, to dar ziemi i pracy rąk. Jednak w rękach elfów z Lothlórien zyskują inny wymiar – Lembas, chleb podróżny, który krzepi serce i wzmacnia siły wędrowca. Nie są to zwykłe wypieki, lecz przejaw troski natury o tych, którzy wędrują daleko od domów.\n\n
+Te cztery dary – mithril, drewno, ryby i chlebki – są fundamentem życia Śródziemia, łącząc przeszłość z teraźniejszością. Każdy z nich niesie w sobie fragment historii świata, opowieść o współistnieniu ludzi, elfów, krasnoludów i natury. Tak długo, jak będą szanowane, kraina ta pozostanie pełna magii i harmonii.</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
