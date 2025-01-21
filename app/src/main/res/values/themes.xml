@@ -12,7 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-<!--        <item name="android:windowBackground">@drawable/wallpaper</item>-->
+        <item name="android:windowBackground">@drawable/wallpaper</item>
     </style>
 
     <style name="Theme.SGame.NoActionBar">
