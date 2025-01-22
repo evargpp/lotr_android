@@ -25,6 +25,12 @@
     <string name="goods_bread">Chlebki</string>
     <string name="goods_fish">Ryby</string>
 
+    <string name="default_mithril_value">0</string>
+    <string name="default_wood_value">0</string>
+    <string name="default_bread_value">0</string>
+    <string name="default_fish_value">0</string>
+
+
     <string name="building_mine">Kopalnia</string>
     <string name="building_sawmill">Tartak</string>
     <string name="building_bakery">Piekarnia</string>

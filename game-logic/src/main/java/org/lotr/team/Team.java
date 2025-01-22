@@ -17,6 +17,7 @@ public class Team {
     private int fish;
     private int bread;
     private int mithril;
+    private int wood;
     private City currentCity;
     private boolean inTransit;
 
@@ -29,6 +30,7 @@ public class Team {
         this.fish = 0;
         this.bread = 0;
         this.mithril = 0;
+        this.wood = 0;
         this.currentCity = startingCity;
         this.inTransit = false;
 
@@ -60,6 +62,9 @@ public class Team {
             case MITHRIL:
                 mithril += amount;
                 break;
+            case WOOD:
+                wood += amount;
+                break;
             default:
                 System.out.println("Nieznany typ zasobu: " + resourceType);
         }
@@ -68,7 +73,7 @@ public class Team {
     // Wyświetlanie stanu drużyny
     public void showTeamStatus() {
         System.out.println("Drużyna " + name + " jest w mieście: " + currentCity.getName());
-        System.out.println("Zasoby - Rybki: " + fish + ", Chlebki: " + bread + ", Mithril: " + mithril);
+        System.out.println("Zasoby - Rybki: " + fish + ", Chlebki: " + bread + ", Mithril: " + mithril + ", drewno: " + wood);
         System.out.println("Członkowie drużyny: ");
         for (AbstractCharacter member : members) {
             System.out.println(" - " + member.getName());
@@ -97,7 +102,6 @@ public class Team {
         this.inTransit = inTransit;
     }
 
-    // Gettery dla zasobów i lokalizacji
     public int getFish() {
         return fish;
     }
@@ -108,6 +112,26 @@ public class Team {
 
     public int getMithril() {
         return mithril;
+    }
+
+    public void setFish(int fish) {
+        this.fish = fish;
+    }
+
+    public void setBread(int bread) {
+        this.bread = bread;
+    }
+
+    public void setMithril(int mithril) {
+        this.mithril = mithril;
+    }
+
+    public int getWood() {
+        return wood;
+    }
+
+    public void setWood(int wood) {
+        this.wood = wood;
     }
 
     public City getCurrentCity() {

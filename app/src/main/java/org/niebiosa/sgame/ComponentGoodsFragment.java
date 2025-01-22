@@ -1,36 +1,36 @@
 package org.niebiosa.sgame;
 
 import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class ComponentGoodsFragment extends Fragment {
 
-    private ComponentGoodsViewModel mViewModel;
-
-    public static ComponentGoodsFragment newInstance() {
-        return new ComponentGoodsFragment();
-    }
+    private ComponentGoodsViewModel viewModel;
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_component_goods, container, false);
-    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_component_goods, container, false);
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ComponentGoodsViewModel.class);
-        // TODO: Use the ViewModel
-    }
+        TextView mithrilTextView = view.findViewById(R.id.textGoodsValueMithril);
+        TextView woodTextView = view.findViewById(R.id.textGoodsValueWood);
+        TextView breadTextView = view.findViewById(R.id.textGoodsValueBread);
+        TextView fishTextView = view.findViewById(R.id.textGoodsValueFish);
 
+        viewModel = new ViewModelProvider(this).get(ComponentGoodsViewModel.class);
+
+        viewModel.getMithril().observe(getViewLifecycleOwner(), mithrilTextView::setText);
+        viewModel.getWood().observe(getViewLifecycleOwner(), woodTextView::setText);
+        viewModel.getBread().observe(getViewLifecycleOwner(), breadTextView::setText);
+        viewModel.getFish().observe(getViewLifecycleOwner(), fishTextView::setText);
+
+        return view;
+    }
 }

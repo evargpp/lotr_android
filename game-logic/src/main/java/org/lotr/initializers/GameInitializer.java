@@ -42,6 +42,11 @@ public class GameInitializer {
         Hobbit hobbit = new Hobbit("Frodo", 50, 20, 10, 15, 5, 10, 20, 20);
         Elf elf = new Elf("Legolas", 50, 20, 10, 15, 5, 10, 20);
 
+        team.setFish(200);
+        team.setWood(200);
+        team.setMithril(200);
+        team.setBread(300);
+
         team.addMember(hobbit);
         team.addMember(elf);
 
