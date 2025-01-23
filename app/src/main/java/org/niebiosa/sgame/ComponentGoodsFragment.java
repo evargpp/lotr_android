@@ -1,36 +1,32 @@
 package org.niebiosa.sgame;
 
-import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
+import androidx.lifecycle.ViewModelProvider;
+import org.niebiosa.sgame.databinding.FragmentComponentGoodsBinding;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
 public class ComponentGoodsFragment extends Fragment {
 
     private ComponentGoodsViewModel viewModel;
+    private FragmentComponentGoodsBinding binding;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_component_goods, container, false);
-
-        TextView mithrilTextView = view.findViewById(R.id.textGoodsValueMithril);
-        TextView woodTextView = view.findViewById(R.id.textGoodsValueWood);
-        TextView breadTextView = view.findViewById(R.id.textGoodsValueBread);
-        TextView fishTextView = view.findViewById(R.id.textGoodsValueFish);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_component_goods, container, false);
 
         viewModel = new ViewModelProvider(this).get(ComponentGoodsViewModel.class);
 
-        viewModel.getMithril().observe(getViewLifecycleOwner(), mithrilTextView::setText);
-        viewModel.getWood().observe(getViewLifecycleOwner(), woodTextView::setText);
-        viewModel.getBread().observe(getViewLifecycleOwner(), breadTextView::setText);
-        viewModel.getFish().observe(getViewLifecycleOwner(), fishTextView::setText);
+        binding.setViewModel(viewModel);
+        binding.setLifecycleOwner(getViewLifecycleOwner());
 
-        return view;
+        return binding.getRoot();
     }
 }
