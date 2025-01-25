@@ -4,30 +4,30 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class Bakery extends AbstractBuilding{
+public class Sawmill extends AbstractBuilding {
 
-    private int accumulatedBread = 0;
+    private int accumulatedWood = 0;
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
-    public Bakery(String name) {
+    public Sawmill(String name) {
         super(name);
-        startBreadProduction();
+        startWoodProduction();
     }
 
-    private void startBreadProduction() {
+    private void startWoodProduction() {
         scheduler.scheduleWithFixedDelay(() -> {
-            accumulatedBread += 20;
-        }, 0, 3, TimeUnit.SECONDS);
+            accumulatedWood += 25;
+        }, 0, 4, TimeUnit.SECONDS);
     }
 
-    public int collectBread() {
-        int collected = accumulatedBread;
-        accumulatedBread = 0;
+    public int collectWood() {
+        int collected = accumulatedWood;
+        accumulatedWood = 0;
         return collected;
     }
 
     @Override
     public void performAction() {
-        System.out.println("Pieczemy ciasteeeeczka!!!");
+        System.out.println("Przetwarzamy drewno!");
     }
 }

@@ -29,6 +29,8 @@ public class GameInitializer {
         hobbiton.addBuilding(new FishingHut("GounlyFishingHut"));
         hobbiton.addBuilding(new Bakery("BallyBakery"));
         hobbiton.addBuilding(new Tavern("TurryTavern"));
+        hobbiton.addBuilding(new Sawmill("PlankySaw"));
+        hobbiton.addBuilding(new Mine("DomiMine"));
 
         erebor.addBuilding(new Tavern("GrimmlyTavern"));
         erebor.addBuilding(new Mine("MithrilMine"));

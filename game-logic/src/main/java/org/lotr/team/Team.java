@@ -8,10 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Team {
-    // Singleton instance
     private static Team instance;
 
-    // Atrybuty drużyny
     private String name;
     private List<AbstractCharacter> members;
     private int fish;
@@ -21,9 +19,6 @@ public class Team {
     private City currentCity;
     private boolean inTransit;
 
-
-
-    // Prywatny konstruktor
     private Team(String name, City startingCity) {
         this.name = name;
         this.members = new ArrayList<>();
@@ -36,7 +31,6 @@ public class Team {
 
     }
 
-    // Publiczna metoda do uzyskania instancji drużyny (Singleton)
     public static Team getInstance(String name, City startingCity) {
         if (instance == null) {
             instance = new Team(name, startingCity);
@@ -44,13 +38,11 @@ public class Team {
         return instance;
     }
 
-    // Metoda dodająca członka do drużyny
     public void addMember(AbstractCharacter character) {
         members.add(character);
         System.out.println(character.getName() + " dołączył do drużyny.");
     }
 
-    // Dodawanie zasobów do drużyny przy użyciu enum ResourceType
     public void addResources(GoodsType resourceType, int amount) {
         switch (resourceType) {
             case FISH:
@@ -70,7 +62,6 @@ public class Team {
         }
     }
 
-    // Wyświetlanie stanu drużyny
     public void showTeamStatus() {
         System.out.println("Drużyna " + name + " jest w mieście: " + currentCity.getName());
         System.out.println("Zasoby - Rybki: " + fish + ", Chlebki: " + bread + ", Mithril: " + mithril + ", drewno: " + wood);
@@ -145,6 +136,22 @@ public class Team {
     public List<AbstractCharacter> getMembers() {
         return members;
     }
+
+    public void addBread(int amount) {
+            this.bread += amount;
+    }
+    public void addMithril(int amount) {
+        this.mithril += amount;
+    }
+
+    public void addWood(int amount) {
+        this.wood += amount;
+    }
+
+    public void addFish(int amount) {
+        this.fish += amount;
+    }
+
 }
 
 

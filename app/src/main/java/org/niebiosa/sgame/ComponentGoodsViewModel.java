@@ -23,6 +23,13 @@ public class ComponentGoodsViewModel extends ViewModel {
         fish.setValue(String.valueOf(gc.getTeam().getFish()));
     }
 
+    public void updateResources(GameController gc) {
+        mithril.setValue(String.valueOf(gc.getTeam().getMithril()));
+        wood.setValue(String.valueOf(gc.getTeam().getWood()));
+        bread.setValue(String.valueOf(gc.getTeam().getBread()));
+        fish.setValue(String.valueOf(gc.getTeam().getFish()));
+    }
+
     public LiveData<String> getMithril() {
         return mithril;
     }

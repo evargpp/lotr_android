@@ -21,20 +21,6 @@ public class City {
         System.out.println(name + " belongs to region: " + region.getName());
     }
 
-    public String getName() {
-        return name;
-    }
-
-    // signleton aby istaniłtylko jeden budynek w danym mieście!
-    public void addBuilding(AbstractBuilding building) {
-        for (AbstractBuilding existingBuilding : buildings) {
-            if (existingBuilding.getClass().equals(building.getClass())) {
-                System.out.println("Ten budynek już istnieje" + building.getClass().getSimpleName() + " in " + name);
-                return;
-            }
-        }
-        buildings.add(building);
-    }
 
     public List<AbstractBuilding> getBuildings() {
         return buildings;
@@ -54,6 +40,31 @@ public class City {
 
     @Override
     public String toString() {
-        return "City name='" + name + ", buildings: " + buildings +"\n";
+        return "City name='" + name + ", buildings: " + buildings + "\n";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    // signleton aby istaniłtylko jeden budynek w danym mieście!
+    public void addBuilding(AbstractBuilding building) {
+        for (AbstractBuilding existingBuilding : buildings) {
+            if (existingBuilding.getClass().equals(building.getClass())) {
+                System.out.println("Ten budynek już istnieje" + building.getClass().getSimpleName() + " in " + name);
+                return;
+            }
+        }
+        buildings.add(building);
+    }
+
+    //metoda generyczna, podajesz typ jaki chcesz, i wszędzie tam gdzie trzeba zachowuje układa zachowanie pod ten typ
+    public <T> T findBuildingByType(Class<T> buildingType) {
+        for (AbstractBuilding building : buildings) {
+            if (buildingType.isInstance(building)) {
+                return buildingType.cast(building);
+            }
+        }
+        return null;
     }
 }
